@@ -1,22 +1,6 @@
 import React from 'react';
 // import './App.css';
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onIncreaseClick: (num) => dispatch((dispatch ,state)=>(
-      setTimeout(function(){
-        dispatch({number:num,type:"INCREMENT"})
-      },3000)
-    )),
-    onDecreaseClick: (num) => dispatch((dispatch ,state)=>(
-      setTimeout(function(){
-        dispatch({number:num,type:"DECREMENT"})
-      },3000)
-    ))
-  }
-}
-
-
 class SubApp extends React.Component {
   render() {
     const value = this.props.store.getState();

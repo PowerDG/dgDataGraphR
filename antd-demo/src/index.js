@@ -19,7 +19,25 @@ import thunk from 'redux-thunk';
 // import registerServiceWorker from './registerServiceWorker';
 
 // const stores = initializeStores();
+import {createLogger} from 'redux-logger';
+const logger = createLogger(); 
 
+
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onIncreaseClick: (num) => dispatch((dispatch ,state)=>(
+      setTimeout(function(){
+        dispatch({number:num,type:"INCREMENT"})
+      },3000)
+    )),
+    onDecreaseClick: (num) => dispatch((dispatch ,state)=>(
+      setTimeout(function(){
+        dispatch({number:num,type:"DECREMENT"})
+      },3000)
+    ))
+  }
+}
 
 ReactDOM.render(
   // <React.StrictMode>
@@ -34,7 +52,7 @@ ReactDOM.render(
 
 // var store = createStore(reducer);
 
-var store = createStore(reducer, applyMiddleware(thunk));
+var store = createStore(reducer, applyMiddleware(thunk,logger));
 function render(){
   ReactDOM.render(
     
