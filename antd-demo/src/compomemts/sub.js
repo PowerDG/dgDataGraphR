@@ -5,7 +5,7 @@ export default class Parent extends Component {
         return(
             <div>
                 <Child onRef={this.onRef} />
-                <button onClick={this.click} >click</button>
+                <button onClick={this.click} >6969</button>
             </div>
         )
     }

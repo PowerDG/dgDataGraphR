@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'mobx-react';
 import Utils from './utils/utils';
 import abpUserConfigurationService from './services/abpUserConfigurationService';
-import initializeStores from './stores/storeInitializer';
+// import initializeStores from './stores/storeInitializer';
 import registerServiceWorker from './registerServiceWorker';
 
 declare var abp: any;
